@@ -10,8 +10,6 @@ WORKDIR /var/www
 
 RUN git clone https://gitlab.com/andromeda99/html.git
 
-VOLUME "/test:/tmp:rw"
-
 EXPOSE 80
 
 CMD ["-D", "FOREGROUND"]
