@@ -2,8 +2,6 @@ FROM centos
 
 RUN yum install httpd -y
 
-RUN yum install elinks -y
-
 RUN  yum install git -y
 
 WORKDIR /var/www
