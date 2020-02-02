@@ -4,9 +4,9 @@ RUN yum install httpd -y
 
 RUN  yum install git -y
 
-WORKDIR /var/www
+RUN touch /root/test.txt
 
-RUN git clone https://gitlab.com/andromeda99/html.git
+RUN echo "Hello World"
 
 EXPOSE 80
 
