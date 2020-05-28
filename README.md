@@ -10,6 +10,8 @@ RUN touch /root/test.txt
 
 RUN echo "Hello World"
 
+ENV x=/tmp/workspace
+
 EXPOSE 80
 
 CMD ["-D", "FOREGROUND"]
