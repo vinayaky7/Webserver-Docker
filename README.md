@@ -1,5 +1,7 @@
 FROM centos
 
+MAINTAINER "Aamir M. Shaikh"
+
 RUN yum install httpd -y
 
 RUN  yum install git -y
