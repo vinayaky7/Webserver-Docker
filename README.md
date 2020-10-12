@@ -13,3 +13,7 @@
 
 6. docker run -itd --name mywebserver -p 8888:80 image_name:tag
 
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
