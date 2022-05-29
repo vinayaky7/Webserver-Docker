@@ -24,6 +24,8 @@ WORKDIR /home/$user
 
 ADD radical.tar.gz .
 
+ADD https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz .
+
 RUN touch index.php
 
 RUN echo "Hello Radical" >> /tmp/index.php
