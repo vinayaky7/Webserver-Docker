@@ -22,6 +22,8 @@ USER $user
 
 WORKDIR /home/$user
 
+ADD radical.tar.gz .
+
 RUN touch index.php
 
 RUN echo "Hello Radical" >> /tmp/index.php
