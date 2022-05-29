@@ -1,22 +1,29 @@
 FROM centos:centos7
 MAINTAINER "Aamir M. Shaikh"
 
-ARG USERNAME=user-name-goes-here
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+ARG USERNAME=radical
 
-RUN yum install httpd -y
-RUN  yum install git -y
+RUN groupadd -r $USERNAME && useradd -r -g $USERNAME $USERNAME
 
-RUN groupadd --gid $USER_GID $USERNAME \
-    useradd -d /home/$USERNAME -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME 
+RUN chown -R $USERNAME:$USERNAME /home/$USERNAME/
+
+USER $USERNAME
+
 WORKDIR /home/$USERNAME
 
-COPY index.html /tmp
+RUN yum install httpd -y
+RUN yum install git -y
+
+COPY /var/tmp/index.html /tmp
+
 #COPY . /var/www/html
+
 WORKDIR /tmp
+
 RUN touch index.php
+
 RUN echo "Hello Radical" >> /tmp/index.php
+
 ENV DocumentRoot=/var/www/html/
 
 EXPOSE 80
