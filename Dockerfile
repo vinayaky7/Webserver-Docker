@@ -29,7 +29,7 @@ ADD https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin
 
 RUN touch index.php
 
-RUN echo "Hello Radical" >> /tmp/index.php
+RUN echo "Hello Radical" >> /home/$user/index.php
 
 ENV DocumentRoot=/var/www/html/
 
