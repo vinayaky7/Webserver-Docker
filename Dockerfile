@@ -17,7 +17,8 @@ RUN chmod -R 755 /home/$user
 
 #COPY /var/tmp/index.html /tmp
 
-#COPY . /var/www/html
+COPY index.html /var/www/html/
+
 USER $user
 
 WORKDIR /home/$user
