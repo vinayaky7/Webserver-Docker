@@ -1,5 +1,4 @@
 FROM centos:centos7
-MAINTAINER "Aamir M. Shaikh"
 
 ARG user=appuser
 ARG uid=1010
