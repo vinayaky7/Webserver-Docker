@@ -12,7 +12,7 @@ RUN groupadd -g $gid -r $user && useradd -u $uid -g $gid -r -m -d /home/$user -g
 
 ADD radical.tar.gz /home/$user
 
-ADD https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz /home/$user
+ADD https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz /home/$user
 
 RUN touch index.php
 
